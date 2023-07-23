@@ -12,7 +12,9 @@ body {
 }
 
 #side {
-    background-color: brown;
+    background-color: rgb(202, 91, 57);
+    height: 100vh;
+
     display: grid;
     grid-template-rows: minmax(50px, 1fr) 4fr 5fr;
 }
@@ -33,7 +35,7 @@ li {
 }
 
 #header {
-    background-color: aquamarine;
+    background-color: beige;
     grid-column: 2 / 3;
     padding: 10px 25px;
     display: grid;
@@ -44,12 +46,20 @@ li {
 }
 #header1 {
     display: grid;
-    grid-template-columns: 70vh 30vh;
+    grid-template-columns: 70vh 1fr;
+    grid-row: 1/2;
 }
 #s70 {
     grid-column: 1/2;
     display: grid;
     align-items: center;
+    grid-template-columns: 4vh 1fr;
+}
+#searchbar {
+    background-color: gray;
+    height: 20px;
+    margin-right: 20px;
+    border-radius: 8px;
 }
 #t30 {
     grid-column: 2/3;
@@ -57,13 +67,50 @@ li {
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     justify-self: end;
-    gap: 20px;
+    gap: 10px;
 }
 #header1 #ava{
     width: 40px;
     border-radius: 25px;
+    justify-self: center;
+}
+#bell {
+    justify-self: end;
+}
+#header2 {
+    display: grid;
+    grid-template-columns: 70vh 1fr;
+}
+#header2 #ava {
+    width: 60px;
+    border-radius: 25px;
+    grid-row: 2/3;
+}
+#header2left {
+    display: grid;
+    grid-template-columns: 12vh 1fr;
+}
+#header2right button{
+    background-color: rgb(202, 91, 57);
+    appearance: none;
+    border: none;
+    border-radius: 10px;
+    width: 90px;
+    height: 25px;
+    padding: 4px;
+}
+#header2right {
+    grid-column: 2/3;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-self: end;
+    gap: 10px;
+}
+#new {
+    align-items: end;
 }
 #main {
-    background-color: darkorange;
+    background-color: gray;
     grid-column: 2/3;
 }

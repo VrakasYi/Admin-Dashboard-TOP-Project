@@ -1,28 +1,26 @@
 body {
     margin: 0;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 22px;
+    box-sizing: border-box;
 }
-
 #container {
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
-
 #right {
-    grid-column: 2/3;  
+    grid-column: 2/3;
 }
-
 #side {
+    font-weight: 700;
     background-color: rgb(202, 91, 57);
     height: 100vh;
-
     display: grid;
     grid-template-rows: minmax(50px, 1fr) 4fr 5fr;
 }
-
 li {
     list-style: none;
 }
-
 #dash {
     grid-row: 1/2;
     max-height: 50px;
@@ -33,13 +31,17 @@ li {
 #settings {
     grid-row: 3/4;
 }
-
 #header {
+    box-sizing: border-box;
     background-color: beige;
     grid-column: 2 / 3;
     padding: 10px 25px;
     display: grid;
     grid-template-rows: 2fr 3fr;
+    height: 17vh;
+}
+#header, #header button {
+    font-weight: 700;
 }
 #header1 img {
     width: 20px;
@@ -58,14 +60,13 @@ li {
 #searchbar {
     background-color: gray;
     height: 20px;
-    margin-right: 20px;
     border-radius: 8px;
 }
 #t30 {
     grid-column: 2/3;
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 120px 120px 120px;
     justify-self: end;
     gap: 10px;
 }
@@ -103,14 +104,24 @@ li {
     grid-column: 2/3;
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 120px 120px 120px;
     justify-self: end;
     gap: 10px;
 }
+#header button, #side {
+    color: white;
+}
 #new {
-    align-items: end;
+    justify-self: end;
+}
+#upload {
+    justify-self: center;
+}
+#share {
+    justify-self: start;
 }
 #main {
     background-color: gray;
     grid-column: 2/3;
+    height: 83vh;
 }

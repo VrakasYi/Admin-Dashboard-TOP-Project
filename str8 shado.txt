@@ -1,0 +1,34 @@
+To achieve an inset shadow on the left side of a container that remains straight and doesn't curve along with the rounded edges, you can use a combination of an inner wrapper element and the `box-shadow` property. The inner wrapper will create the straight shadow, and the outer container will have rounded corners. Here's how you can do it:
+
+HTML:
+```html
+<div class="outer-container">
+  <div class="inner-wrapper">
+    <!-- Your content goes here -->
+  </div>
+</div>
+```
+
+CSS:
+```css
+.outer-container {
+  width: 200px;
+  height: 150px;
+  background-color: #f0f0f0;
+  border-radius: 15px; /* Set the desired border radius */
+  overflow: hidden; /* Ensure the inner shadow doesn't overflow */
+}
+
+.inner-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: transparent; /* Set the background to transparent */
+  box-shadow: inset -10px 0 10px -10px #888888; /* The key is to use a negative spread radius */
+}
+```
+
+In this example, we use an `.outer-container` to have rounded corners, and an `.inner-wrapper` is added inside it. The `.inner-wrapper` has a negative spread radius, which offsets the shadow outside the box, effectively creating a straight shadow on the left side.
+
+By adjusting the `box-shadow` values, you can control the position, size, and color of the shadow.
+
+Feel free to adjust the dimensions, border radius, and shadow properties to match your specific design requirements.

@@ -132,27 +132,29 @@ li {
     /*height: 83vh;*/
     display: grid;
     grid-template-columns: 73% 27%;
-    padding: 5px 10px;
     z-index: 0;
 }
 #mainleft {
     display: grid;
-    /*grid-template-columns: 45% 45%;*/
-    grid-template-rows: 4% 26% 26% 26%;
-    gap: 20px;
+    grid-template-rows: 5% 1fr;
 }
-#yourP {
-    grid-column: 1/3;
+#yourProjects {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 0px 20px;
+    margin-right: 20px;
 }
 .projects {
     box-sizing: border-box;
     background-color: white;
     border-radius: 8px;
-    width: 95%;
+    /*width: 95%;*/
     z-index: 1;
     box-shadow: 3px 4px 7px 1px rgba(127, 116, 70, 0.259);
-    padding-right: 5px;
-    margin-right: 10px;
+    /*padding-right: 5px;
+    margin-right: 10px;*/
     /*box-shadow:  4px 0px 0px 0px yellowgreen inset;*/
 }
 
@@ -160,20 +162,17 @@ li {
     display: grid;
     grid-template-rows: 7% 39% 7% 39%;
 }
-h5 {
-    position: relative;
-    top: -25px;
-    left: 30px;
+
+.projectParagraph {
+    font-size: 14px;
+    color:gray;
 }
-p {
-    font-size: smaller;
-    position: relative;
-    top: -45px;
-    left: 30px;
-    margin-right: 35px;
+.projInnerHeader {
+    font-size: 16px;
+    font-weight: 700;
 }
 .prL {
-    justify-self: end;
+    /*justify-self: end;*/
 }
 .mainRcont, .mainRTrend {
     box-sizing: border-box;
@@ -197,10 +196,11 @@ p {
 }
 .mainRcont .bold {
     font-weight: bold;
-    font-size: small;
+    font-size:medium;
 }
 .mainRcont .stext {
-    font-size: small; 
+    font-size: small;
+    color: gray;
 }
 .transparent {
     opacity: 100%;
@@ -211,4 +211,27 @@ p {
     grid-template-rows: 25% 25% 25% 25%;
     padding: 5px 25px;
     align-items: center;
+}
+.mainRTrend > div {
+    display: flex;
+    font-size: medium;
+}
+.mainRTrend img {
+    width: 60px;
+    height: 55px;
+}
+.mainHeader {
+    font-weight: 700;
+    font-size: large;
+}
+.p3Icons {
+    display: grid;
+    grid-template-columns: 55% 15% 15% 15%;
+    height: 20px;
+    z-index: 4;
+    position: relative;
+}
+.p3Icons > div {
+    width: 20px;
+    position: absolute;
 }

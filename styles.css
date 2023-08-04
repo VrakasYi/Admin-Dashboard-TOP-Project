@@ -20,6 +20,8 @@ body {
     display: grid;
     grid-template-rows: minmax(50px, 1fr) 4fr 5fr;
     z-index: 1;
+    justify-content: center;
+    padding-top: 30px;
 }
 li {
     list-style: none;
@@ -30,9 +32,15 @@ li {
 }
 #home {
     grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 #settings {
     grid-row: 3/4;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 #header {
     box-sizing: border-box;
@@ -136,7 +144,7 @@ li {
 }
 #mainleft {
     display: grid;
-    grid-template-rows: 5% 1fr;
+    grid-template-rows: 7% 1fr 7%;
 }
 #yourProjects {
     display: grid;
@@ -150,17 +158,17 @@ li {
     box-sizing: border-box;
     background-color: white;
     border-radius: 8px;
-    /*width: 95%;*/
     z-index: 1;
     box-shadow: 3px 4px 7px 1px rgba(127, 116, 70, 0.259);
-    /*padding-right: 5px;
-    margin-right: 10px;*/
-    /*box-shadow:  4px 0px 0px 0px yellowgreen inset;*/
+    padding: 5% 5% 5% 10%;
+    display: grid;
+    grid-template-rows: 15% 70%;
+    border-left: 8px solid orange;
 }
 
 #mainright {
     display: grid;
-    grid-template-rows: 7% 39% 7% 39%;
+    grid-template-rows: 7% 39.5% 7% 39.5% 7%;
 }
 
 .projectParagraph {
@@ -171,6 +179,10 @@ li {
     font-size: 16px;
     font-weight: 700;
 }
+/*.projects:nth-child(1){
+    font-size: 16px;
+    font-weight: 700;
+}*/
 .prL {
     /*justify-self: end;*/
 }
@@ -223,15 +235,33 @@ li {
 .mainHeader {
     font-weight: 700;
     font-size: large;
+    padding-left: 20px;
+    align-self: end;
 }
 .p3Icons {
     display: grid;
     grid-template-columns: 55% 15% 15% 15%;
     height: 20px;
     z-index: 4;
-    position: relative;
 }
 .p3Icons > div {
     width: 20px;
-    position: absolute;
+}
+#home img, #settings img {
+    width: 21px;
+}
+
+#home > div, #settings > div {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+#dash img {
+    width: 35px;
+}
+#dash {
+   display: flex; 
+   gap: 10px;
+   align-items: center;
+   font-size: 28px;
 }
